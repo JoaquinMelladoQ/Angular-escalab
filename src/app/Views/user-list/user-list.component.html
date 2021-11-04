@@ -1,0 +1,24 @@
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Nombre</th>
+      <th>Imagen</th>
+      <th>Node ID</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let items of usuarios">
+      <th>{{ items.id }}</th>
+      <th>{{ items.login }}</th>
+      <th>
+        <img src="{{ items.avatar_url }}" style="width: 20px;">
+      </th>
+      <th>{{ items.node_id }}</th>
+      <th>
+        <button (click)="userDetail(items.login)">Ver más</button>
+      </th>
+    </tr>
+  </tbody>
+</table>
